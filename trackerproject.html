@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    
+
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:aliceblue;
+}
+
+.container {
+    width: 400px;
+    background-color:6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.balance {
+    margin-bottom: 20px;
+    color:pink;
+    font-weight: bold;
+}
+
+.transaction-form, .transaction-history {
+    margin-bottom: 20px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.transaction-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.income {
+    color: #4caf50;
+}
+
+.expense {
+    color: #f44336;
+}
+.delete-btn {
+    background: none;
+    border: none;
+    color: #f44336;
+    cursor: pointer;
+}
+
+    </style>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="balance">
+            <h2>Current Balance: $<span id="balance">0.00</span></h2>
+        </div>
+        <div class="transaction-form">
+            <h3>Add New Transaction</h3>
+            <form id="transactionForm">
+                <input type="text" id="transactionName" placeholder="Transaction Name" required>
+                <input type="number" id="transactionAmount" placeholder="Amount" required>
+                <select id="transactionType">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+        <div class="transaction-history">
+            <h3>Transaction History</h3>
+            <ul id="transactionList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
